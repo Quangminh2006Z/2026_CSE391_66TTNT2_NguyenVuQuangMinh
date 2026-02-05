@@ -1,0 +1,147 @@
+.nav-bar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-btn{
+    margin-left: 24px;
+   font-size: 20px;
+   margin-top: 4px;
+}
+.bold{
+    font-weight: bold;
+
+}
+
+.search-bar {
+    width: 220px;
+    background-color: aliceblue;
+    color: black;
+    height: 36px;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    cursor: text;
+    
+}
+
+.search-btn {
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    justify-self: end;
+    border: 1px solid white;
+    height: 36px;
+    width: 120px;
+    cursor:pointer ;
+}
+
+
+.search-text{
+    margin-left: 12px;
+}
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    justify-content: space-between;
+}
+
+.main-title{
+    font-size: 48px;
+}
+
+
+.main-heading{
+    width: 100%;
+    
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.main-title{
+    margin-left: 24px;
+   
+   
+}
+
+.add-btn{
+    background-color: rgb(88, 137, 229);
+    height: 60px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    margin-right: 24px;
+    border-radius: 12px;
+    color:white;
+    cursor: pointer;
+    font-size: 24px;
+    align-items: center;
+}
+
+.employee-table-div{
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    
+}
+.employee-table{
+    margin: 16px;
+    
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    height: 50vh;
+    border-radius: 12px;
+    border-collapse: collapse;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+.edit-btn{
+    background-color: rgb(235, 197, 71);
+    height: 48px;
+    width: 60px;
+    
+    border: none;
+    margin-right: 24px;
+    border-radius: 6px;
+    color:white;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
+
+.delete-btn{
+    background-color: rgb(232, 66, 66);
+    height: 48px;
+    width: 80px;
+    font-size: 16px;
+    border: none;
+    margin-right: 24px;
+    border-radius: 6px;
+    color:white;
+    cursor: pointer;
+
+}
+
+ .tr-border {
+  border-top: 1px solid black;
+  border-collapse: collapse;
+  
+}
+
+.table-head{
+    margin: 12px;
+    padding: 12px;
+}
