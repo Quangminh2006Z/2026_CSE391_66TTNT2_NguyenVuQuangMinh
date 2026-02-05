@@ -1,0 +1,66 @@
+.header-title{
+    width: 1200px;
+    background-color: rgb(241, 229, 208);
+    height: 72px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    color: red;
+    
+}
+.upcm-course-title{
+    margin-left: 36px;
+}
+
+.container{
+    width: 1200px;
+    background-color: rgb(208, 226, 241);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.course-card{
+    
+    width: 360px;
+    height: 320px;
+    background-color: rgb(255, 255, 255);
+    margin:12px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    
+}
+.course-img{
+    height: 95px;
+    width: 98%;
+    margin-left: 4px;
+    margin-top: 4px;
+    align-self: center;
+    border-radius: 4px;
+
+}
+.course-title{
+    width: 350px;
+    margin-left: 8px;
+    
+}
+
+.course-detail{
+     width: 350px;
+     margin-left: 8px;
+}
+
+.course-desc{
+     width: 350px;  
+     margin-left: 8px;
+}
+
+.detail-icon{
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
