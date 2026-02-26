@@ -12,7 +12,7 @@ a{
     color: black;
 }
 .h-container{
-    background-image: url(/css-clone-2/extra-files/cities-page-2/ocean.jpg);
+    background-image: url(/css-clone-travel-page-v1/extra-files/cities-page-2/ocean.jpg);
 }
 .nav-items{
     display: inline;
@@ -46,7 +46,7 @@ display: inline;
     justify-content: center;
     background-size: cover;
     background-position: center;
-    background-image:url(/css-clone-2/extra-files/cities-page-2/ocean.jpg);
+    background-image:url(/css-clone-travel-page-v1/extra-files/cities-page-2/ocean.jpg);
 }
 
 .content-div{
@@ -96,6 +96,7 @@ display: inline;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     
 }
 body{
@@ -106,9 +107,11 @@ body{
     align-self: center;
 }
 .img-list{
-    width: 60%;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding:0;
 }
