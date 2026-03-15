@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-danger">
+        <h1 class="text-center text-white">Student Table</h1>
+    </div>
+    <div class="mb-4 container">
+        <label for="studentName" class="form-label my-2">Tên sinh viên</label>
+        <input type="text" class="form-control" id="studentName" placeholder="Nhập tên sinh viên">
+
+        <label for="studentScore" class="form-label my-2">Điểm</label>
+        <input type="number" class="form-control" id="studentScore" placeholder="Nhập điểm">
+        <button id="addStudentBtn" class="btn btn-primary mt-3">Thêm sinh viên</button>
+        <div class="container col-5">
+            <label for="filteredStudent" class="form-label my-2">Tìm kiếm sinh viên</label>
+            <input type="text" class="form-control" id="filteredStudent" placeholder="Nhập tên sinh viên cần tìm kiếm">
+        </div>
+        <div class="container col-5">
+            <label for="filterGrade" class="form-label my-2">Lọc xếp loại</label>
+            <select class="form-select" id="filteredGrade">
+                <option value="">Tất cả</option>
+                <option value="Giỏi">Giỏi</option>
+                <option value="Khá">Khá</option>
+                <option value="Trung bình">Trung bình</option>
+                <option value="Yếu">Yếu</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-bordered text-center" id="studentTable">
+            <thead class="table-primary">
+                <tr>
+                    <th>STT</th>
+                    <th>Tên sinh viên</th>
+                    <th id="sortScore" style="cursor: pointer;">Điểm ▲▼</th>
+                    <th>Xếp loại</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="student-table-body">
+                <!-- Student rows will be added here dynamically -->
+            </tbody>
+            <tfoot class="table-primary">
+                <tr>
+                    <td colspan="2" class="text-center">Tổng số sinh viên: <span id="totalStudents">0</span></td>
+                    <td colspan="3" class="text-center">Điểm trung bình: <span id="averageScore">0</span></td>
+                </tr>
+        </table>
+        <script src="script.js"></script>
+</body>
+
+</html>

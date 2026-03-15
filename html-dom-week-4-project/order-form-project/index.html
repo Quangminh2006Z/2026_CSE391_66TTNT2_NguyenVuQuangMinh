@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đặt Hàng</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid bg-primary mb-4">
+    <h1 class="text-center text-white py-4">Form Đặt Hàng</h1>
+</div>
+
+<div class="container my-4">
+    <form id="orderForm" class="row g-3">
+
+        <!-- 1. Tên sản phẩm -->
+        <div class="col-12">
+            <label for="productName" class="form-label">Tên sản phẩm</label>
+            <select id="productName" class="form-select">
+                <option value="">-- Chọn sản phẩm --</option>
+                <option value="Áo">Áo — 150.000đ</option>
+                <option value="Quần">Quần — 200.000đ</option>
+                <option value="Giày">Giày — 350.000đ</option>
+                <option value="Túi">Túi — 250.000đ</option>
+            </select>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- 2. Số lượng -->
+        <div class="col-md-6">
+            <label for="quantity" class="form-label">Số lượng</label>
+            <input type="number" class="form-control"
+                id="quantity" placeholder="Nhập số từ 1 đến 99">
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- 3. Tổng tiền (chỉ hiển thị, không nhập) -->
+        <div class="col-md-6">
+            <label class="form-label">Tổng tiền</label>
+            <input type="text" class="form-control bg-light"
+                id="totalPrice" value="0 ₫" readonly>
+        </div>
+
+        <!-- 4. Ngày giao hàng -->
+        <div class="col-12">
+            <label for="deliveryDate" class="form-label">Ngày giao hàng</label>
+            <input type="date" class="form-control" id="deliveryDate">
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- 5. Địa chỉ giao -->
+        <div class="col-12">
+            <label for="address" class="form-label">Địa chỉ giao</label>
+            <input type="text" class="form-control"
+                id="address" placeholder="Nhập địa chỉ (ít nhất 10 ký tự)">
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- 6. Ghi chú + đếm ký tự -->
+        <div class="col-12">
+            <label for="note" class="form-label">
+                Ghi chú
+                <span id="noteCount" class="text-muted ms-2">0/200</span>
+            </label>
+            <textarea class="form-control" id="note"
+                rows="3" placeholder="Tuỳ chọn, tối đa 200 ký tự"></textarea>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- 7. Phương thức thanh toán -->
+        <div class="col-12">
+            <label class="form-label">Phương thức thanh toán</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio"
+                    name="payment" id="paymentCOD" value="COD">
+                <label class="form-check-label" for="paymentCOD">COD</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio"
+                    name="payment" id="paymentBank" value="Chuyển khoản">
+                <label class="form-check-label" for="paymentBank">Chuyển khoản</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio"
+                    name="payment" id="paymentWallet" value="Ví điện tử">
+                <label class="form-check-label" for="paymentWallet">Ví điện tử</label>
+            </div>
+            <!-- Thẻ p sẵn để hiện lỗi radio -->
+            <p id="error-payment" class="text-danger small mb-0"></p>
+        </div>
+
+        <!-- Nút -->
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Đặt hàng</button>
+            <button type="reset" class="btn btn-secondary">Hủy</button>
+        </div>
+
+    </form>
+
+    <!-- Div xác nhận đơn hàng (ẩn ban đầu) -->
+    <div id="confirmBox" class="card mt-4 border-primary"
+        style="display: none;">
+        <div class="card-header bg-primary text-white">
+            Xác nhận đơn hàng
+        </div>
+        <div class="card-body">
+            <p>🛍️ Sản phẩm: <strong id="cf_product"></strong></p>
+            <p>🔢 Số lượng: <strong id="cf_quantity"></strong></p>
+            <p>💰 Tổng tiền: <strong id="cf_total"></strong></p>
+            <p>📅 Ngày giao: <strong id="cf_date"></strong></p>
+            <p>❓ Bạn có chắc muốn đặt hàng?</p>
+            <button id="btnConfirm" class="btn btn-success me-2">Xác nhận</button>
+            <button id="btnCancel" class="btn btn-danger">Hủy</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
