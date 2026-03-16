@@ -174,3 +174,18 @@ function updateTaskCount() {
 }
 loadTasks().forEach(taskName => renderTask(taskName));
 updateTaskCount();
+
+
+
+async function loadTasksFromAPI() {
+    const response = await fetch("https://69b81ba5ffbcd02860973448.mockapi.io/tasks");
+    const tasks = await response.json();
+
+    tasks.forEach(task => {
+        renderTask(task.name);
+    });
+}
+
+
+
+// loadTasksFromAPI() để load task
